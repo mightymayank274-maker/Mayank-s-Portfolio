@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayank - Portfolio</title>
+<style>
+html{
+scroll-behavior:smooth;
+}
+body{
+font-family:Arial,sans-serif;
+background-color:#ffe4e1;
+color:#333333;
+margin:0;
+padding:0;
+}
+header {
+width:80%;
+margin:30px auto 20px auto;
+text-align:center;
+border-bottom:2px solid #333333;
+padding-bottom:20px;
+}
+header h1 {
+font-size:2.5rem;
+margin:0 0 5px 0;
+text-transform:uppercase;
+letter-spacing:2px;
+text-align:center;
+}
+
+header p{
+font-size:1.1rem;
+color:#666666;
+margin:0 0 15px 0;
+text-align:center;
+}
+.theme-btn{
+background-color:#ffffff;
+color:#333333;
+border:2px solid #333333;
+padding:8px 16px;
+border-radius:4px;
+cursor:pointer;
+font-weight:bold;
+margin-bottom:15px;
+}
+nav {
+background-color:#333333;
+padding:12px 10px;
+margin-top:15px;
+border-radius:6px;
+}
+nav a {
+color:#ffffff;           
+text-decoration:none;
+font-weight:bold;
+font-size:1rem;
+text-transform:uppercase;
+letter-spacing:1px;
+margin:0 10px;
+padding:6px 14px;
+border-radius:4px;
+display:inline-block;
+transition:background-color 0.2s ease, color 0.2s ease;
+}
+nav a:hover {
+background-color:#4CAF50;
+color:#ffffff;
+border-bottom:none;
+}
+section{
+width:80%;
+margin:30px auto;
+padding:20px;
+background-color:#f9f9f9;
+border:1px solid #dddddd;
+}
+h2{
+font-size:1.5rem;
+margin-top:0;
+color:#222222;
+border-bottom:1px solid #cccccc;
+padding-bottom:8px;
+}
+p{
+line-height:1.6;
+font-size:1rem;
+color:#444444;
+}
+.project-card,
+.skill-card,
+.education-card{
+width:80%;
+margin:15px auto;
+padding:15px;
+background-color:#ffffff;
+border:1px solid #cccccc;
+}
+.project-card h3,
+.skill-card h3,
+.education-card h3{
+margin:0 0 8px 0;
+color:#222222;
+}
+form{
+width:80%;
+margin:auto;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+width:100%;
+padding:10px;
+margin-bottom:12px;
+border:1px solid #cccccc;
+box-sizing:border-box;
+font-family:inherit;
+}
+button[type="submit"] {
+background-color:#333333;
+color:#ffffff;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+font-size:1rem;
+}
+footer{
+width:80%;
+margin:40px auto 20px auto;
+text-align:center;
+font-size:0.85rem;
+color:#666666;
+border-top:1px solid #dddddd;
+padding-top:15px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>MAYANK</h1>
+<p>A Semester 1 BCA Student</p>
+<button id="themeToggleBtn" class="theme-btn">Dark Mode</button>
+<nav>
+<a href="#about">About Me</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<section id="about">
+<h2>About Me</h2>
+<p>
+Hello! I am <strong>Mayank</strong>, a Bachelor of Computer Applications (BCA) student based in New Delhi.</br>Currently i am learning computer fundamentals and basic web development skills.</br>
+This is my personal portfolio website created using HTML,CSS and JAVASCRIPT.</br>
+I have a strong passion for front-end web development while
+Working and learning with technologies like HTML, CSS, JavaScript, and Python to create clean, responsive websites and interactive web
+applications.</br>
+I enjoy building responsive web interfaces, learning programming languages like Python and C, and working on modern web projects.</br>
+</p>
+</section>
+<section id="projects">
+<h2>Projects</h2>
+<div class="project-card">
+<h3>1. Personal Portfolio Website</h3>
+<p>Designed and built a clean single-page personal developer portfolio using modern HTML, CSS, and interactive JavaScript features.</p>
+</div>
+<div class="project-card">
+<h3>2. Simple C Program</h3>
+<p>A basic C program created for personal interest to perform simple calculations.</p>
+</div>
+<div class="project-card">
+<h3>3. Project for Group </h3>
+<p>Making a frontend in a collaborative team effort for upcoming (SIH-2026),using AI-assistance,by analyzing & understanding every major term.</p>
+</div>
+</section>
+<section id="skills">
+<h2>Skills Learned So Far</h2>
+<div class="skill-card">
+<ul>
+<p>->Basic HTML5</p>
+<p>->Basic CSS</p>
+<p>->Basic C Programming Language</p>
+<p>->Basic Computer Knowledge</p>
+</ul>
+</div>
+</section>
+<section id="education">
+<div class="education-card">
+<h2>Education</h2>
+<ul>
+<p><strong>Bachelor of Computer Applications (BCA)</strong>- 1st Semester(Pursuing)</p>
+
+<p><strong>Higher Secondary School (Class-12)</strong>- Completed</p>
+
+<p><strong>Secondary School (Class-10)</strong>- Completed</p>
+ 
+</ul>
+</div>
+</section>
+<section id="contact">
+<h2>Contact Me</h2>
+<form id="contactForm" onsubmit="alert('Thank you! Your message has been sent :)'); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+<button type="submit">Send</button>
+</form>
+</section>
+<footer>
+<p>&copy; Mayank's BCA Portfolio</p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const themeBtn = document.getElementById('themeToggleBtn');
+themeBtn.addEventListener('click', () => {
+if (document.body.style.backgroundColor==='rgb(18, 18, 18)' || document.body.style.backgroundColor === '#121212') {
+document.body.style.backgroundColor='#ffe4e1';
+document.body.style.color='#333333';
+themeBtn.textContent='Dark Mode';
+} else {
+document.body.style.backgroundColor ='#121212';
+document.body.style.color ='#f1f1f1';
+themeBtn.textContent ='Light Mode';
+}
+});
+});
+</script>
+</body>
+</html>
